@@ -1,0 +1,58 @@
+[
+  {
+    "empId": 25987,
+    "empName": "Alice Johnson",
+    "review": 4,
+    "band": "A1",
+    "salary": 75000.00
+  },
+  {
+    "empId": 26345,
+    "empName": "Bob Smith",
+    "review": 3,
+    "band": "B2",
+    "salary": 62000.00
+  },
+  {
+    "empId": 25671,
+    "empName": "Charlie Brown",
+    "review": 4,
+    "band": "A2",
+    "salary": 95000.00
+  },
+  {
+    "empId": 26102,
+    "empName": "Dana White",
+    "review": 2,
+    "band": "C1",
+    "salary": 55000.00
+  },
+  {
+    "empId": 25480,
+    "empName": "Eve Davis",
+    "review": 3,
+    "band": "B1",
+    "salary": 67000.00
+  },
+  {
+    "empId": 26853,
+    "empName": "Frank Green",
+    "review": 1,
+    "band": "D2",
+    "salary": 48000.00
+  },
+  {
+    "empId": 26714,
+    "empName": "Grace Lee",
+    "review": 4,
+    "band": "C2",
+    "salary": 82000.00
+  },
+  {
+    "empId": 26008,
+    "empName": "Henry Wilson",
+    "review": 2,
+    "band": "D1",
+    "salary": 54000.00
+  }
+]

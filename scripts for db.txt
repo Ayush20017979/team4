@@ -1,0 +1,141 @@
+****************************** Appraisal table scripts **************************************
+
+************** 1. Table Creation **************
+
+// Copy from below this line
+
+-- Table: public.appraisal
+
+-- DROP TABLE IF EXISTS public.appraisal;
+
+CREATE TABLE IF NOT EXISTS public.appraisal
+(
+    emp_id integer NOT NULL,
+    emp_name text COLLATE pg_catalog."default",
+    emp_review integer,
+    emp_band text COLLATE pg_catalog."default",
+    current_salary numeric(15,3),
+    appraisal_percentage double precision,
+    appraised_salary numeric(15,3),
+    CONSTRAINT "Appraisal_pkey" PRIMARY KEY (emp_id)
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.appraisal
+    OWNER to postgres;
+
+// Copy till above this line
+
+************ 2. Insert Your Data -- Replace ? with your data **************
+
+// Copy from below this line
+
+INSERT INTO public.appraisal(
+    emp_id, emp_name, emp_review, emp_band, current_salary, appraisal_percentage, appraised_salary)
+    VALUES (?, ?, ?, ?, ?, ?, ?);
+
+// Copy till above this line
+
+ ****************************** Employee table scripts **************************************
+
+****************** 1. Table Creation *******************
+
+// Copy from below this line
+
+-- Table: public.employee
+
+-- DROP TABLE IF EXISTS public.employee;
+
+CREATE TABLE IF NOT EXISTS public.employee
+(
+    emp_id integer NOT NULL,
+    emp_name text COLLATE pg_catalog."default",
+    emp_review integer,
+    emp_band text COLLATE pg_catalog."default",
+    emp_salary numeric(15,3),
+    CONSTRAINT employee_pkey PRIMARY KEY (emp_id)
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.employee
+    OWNER to postgres;
+
+// Copy till above this line
+
+********** 2. Insert Your Data -- Replace ? with your data **********
+
+// Copy from below this line
+
+INSERT INTO public.employee(
+    emp_id, emp_name, emp_review, emp_band, emp_salary)
+    VALUES (?, ?, ?, ?, ?);
+
+// Copy till above this line
+
+**************************************** Review table scripts ***********************************************
+
+******************** 1. Table Creation *********************
+
+// Copy from below this line
+
+-- Table: public.review
+
+-- DROP TABLE IF EXISTS public.review;
+
+CREATE TABLE IF NOT EXISTS public.review
+(
+    rev_id integer NOT NULL,
+    rev_mul double precision,
+    CONSTRAINT review_pkey PRIMARY KEY (rev_id)
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.review
+    OWNER to postgres;
+
+// Copy till above this line
+
+************** 2. Insert Your Data -- Replace ? with your data ****************
+
+// Copy from below this line
+
+INSERT INTO public.review(
+    rev_id, rev_mul)
+    VALUES (?, ?);
+
+// Copy till above this line
+
+ ****************************** Band table scripts **************************************
+
+**************** 1. Table Creation *******************
+
+// Copy from below this line
+
+-- Table: public.band
+
+-- DROP TABLE IF EXISTS public.band;
+
+CREATE TABLE IF NOT EXISTS public.band
+(
+    band_id text COLLATE pg_catalog."default" NOT NULL,
+    band_mul double precision,
+    CONSTRAINT band_pkey PRIMARY KEY (band_id)
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.band
+    OWNER to postgres;
+
+// Copy till above this line
+
+***************** 2. Insert Your Data -- Replace ? with your data *****************
+
+// Copy from below this line
+
+INSERT INTO public.band(
+    band_id, band_mul)
+    VALUES (?, ?);
+
+// Copy till above this line
+
+*************************************************************** THE END ******************************************************************
